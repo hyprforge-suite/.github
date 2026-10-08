@@ -16,9 +16,13 @@ and every component installable on its own.
 | [hyprforge-tray](https://github.com/hyprforge-suite/hyprforge-tray) | The tray daemon and its menu |
 | [hyprforge-clipboard](https://github.com/hyprforge-suite/hyprforge-clipboard) | Clipboard history and its popup |
 | [hyprforge-emojimenu](https://github.com/hyprforge-suite/hyprforge-emojimenu) | The emoji picker |
+| [hyprforge-notif](https://github.com/hyprforge-suite/hyprforge-notif) | The notification daemon and its notification center |
 
-The component repositories are `git subtree` mirrors of directories in the
-suite repository, kept in step by its `sync.sh`. The suite's README explains
-the layout and how the pieces fit; see
+Each component repository is the real home of its code, and the suite
+repository includes it as a git submodule at `crates/<component>`. The shared
+libraries live in the suite repository and are published to
+[crates.io](https://crates.io/search?q=hyprforge), which is where a component
+built on its own gets them. The suite's README explains the layout and how the
+pieces fit; see
 [CONTRIBUTING](https://github.com/hyprforge-suite/.github/blob/main/CONTRIBUTING.md)
 for where to send a change.
